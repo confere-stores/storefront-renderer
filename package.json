@@ -1,0 +1,66 @@
+{
+  "_from": "@confere-stores/storefront-renderer@^2.4.15",
+  "_id": "@ecomplus/storefront-renderer@2.4.15",
+  "_inBundle": false,
+  "_integrity": "sha512-SqbBjFwJEhiVS1oCNskV+uStuY+ko10CbSZ4qG+U+cDDbJYbWYZVJM8MM7PFxt0JlRr62RaUAGp03pKEtPQ0zg==",
+  "_location": "/@ecomplus/storefront-renderer",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@ecomplus/storefront-renderer@^2.4.15",
+    "name": "@ecomplus/storefront-renderer",
+    "escapedName": "@ecomplus%2fstorefront-renderer",
+    "scope": "@ecomplus",
+    "rawSpec": "^2.4.15",
+    "saveSpec": null,
+    "fetchSpec": "^2.4.15"
+  },
+  "_requiredBy": [
+    "/@ecomplus/storefront-framework"
+  ],
+  "_resolved": "https://registry.npmjs.org/@ecomplus/storefront-renderer/-/storefront-renderer-2.4.15.tgz",
+  "_shasum": "65fe66c6080fa92735f6e9b67f5d5f0c4072cd94",
+  "_spec": "@ecomplus/storefront-renderer@^2.4.15",
+  "_where": "/Users/jescudero/ConfereCartoes/confere-shop/node_modules/@ecomplus/storefront-framework",
+  "author": {
+    "name": "E-Com Club",
+    "email": "ti@e-com.club"
+  },
+  "bugs": {
+    "url": "https://github.com/ecomplus/storefront/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@ecomplus/client": "^2.2.1",
+    "@ecomplus/i18n": "^1.20.0",
+    "@ecomplus/search-engine": "^2.5.0",
+    "@ecomplus/storefront-router": "^2.2.1",
+    "@ecomplus/utils": "^1.4.1",
+    "ejs": "^3.1.6",
+    "html-minifier": "^4.0.0",
+    "image-size": "^0.9.4",
+    "lodash": "^4.17.21",
+    "markdown-it": "^12.0.4"
+  },
+  "deprecated": false,
+  "description": "SSR for Storefront EJS views with E-Com Plus APIs",
+  "homepage": "https://github.com/ecomplus/storefront/tree/master/@ecomplus/storefront-renderer#readme",
+  "keywords": [
+    "ecomplus",
+    "storefront",
+    "ecommerce-renderer",
+    "isg",
+    "pwa-ecommerce",
+    "jamstack-ecommerce"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "name": "@ecomplus/storefront-renderer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecomplus/storefront.git",
+    "directory": "@ecomplus/storefront-renderer"
+  },
+  "version": "2.4.15"
+}
