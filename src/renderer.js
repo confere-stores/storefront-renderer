@@ -1,48 +1,21 @@
 'use strict'
-module.exports = (settings) => {
-  console.log('settings', settings)
+module.exports = (s, contactInfo = null, baseDir) => {
   const path = require('path')
-  const paths = require('./lib/paths')
+  const paths = require('./lib/paths')(baseDir)
   const fs = require('fs')
   const ejs = require('ejs')
   const ecomUtils = require('@ecomplus/utils')
   const ecomClient = require('@ecomplus/client')
   const StorefrontRouter = require('@ecomplus/storefront-router')
   const EcomSearch = require('@ecomplus/search-engine')
-  const getStoreData = require('./lib/get-store-data')
-  const cmsCollections = require('./lib/cms-collections')
+  const getStoreData = require('./lib/get-store-data')(baseDir)
+  const cmsCollections = require('./lib/cms-collections')(baseDir)
+  const config = require('./lib/config')(baseDir)
   const lodash = require('lodash')
   const MarkdownIt = require('markdown-it')
   const imageSize = require('image-size')
 
-  // const { devMode, storeId, lang, settings, templatePkg } = config
-
-  const primaryColor = settings.primary_color || '#3fe3e3'
-  const secondaryColor = settings.secondary_color || '#5e1efe'
-  const lang = settings.lang || 'en_us'
-// number Store ID from content settings or env var
-  let storeId = settings.store_id || process.env.ECOM_STORE_ID || 1011
-  if (typeof storeId === 'string') {
-    storeId = parseInt(storeId, 10)
-  }
-
-// imported storefront template and components packages
-  const templatePkg = process.env.STOREFRONT_TEMPLATE || '@ecomplus/storefront-template'
-  const componentsPkg = process.env.STOREFRONT_COMPONENTS || '@ecomplus/storefront-components'
-  const devMode = process.env.NODE_ENV !== 'production'
-
-  const config = {
-    devMode,
-    settings,
-    lang,
-    storeId,
-    primaryColor,
-    secondaryColor,
-    templatePkg,
-    componentsPkg
-  }
-  console.log('config', config)
-
+  const { devMode, storeId, lang, settings, templatePkg } = config
 
 // setup E-Com Plus global config
   const { $ecomConfig } = ecomUtils
@@ -153,6 +126,7 @@ module.exports = (settings) => {
           obj = JSON.parse(fs.readFileSync(filepath, 'utf8'))
         } else {
           obj = require(filepath)
+          delete require.cache[filepath]
         }
       } catch (e) {
         // ignore non existent file
@@ -202,7 +176,6 @@ module.exports = (settings) => {
   return (url, route) => dataPromise
 
     .then(() => {
-      console.log(url, path)
       if (route && route.path) {
         return route
       } else if (url !== '/' && !slugRegex.test(url)) {

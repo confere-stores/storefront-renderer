@@ -1,17 +1,18 @@
 const path = require('path')
+const fs = require('fs')
 
 const {
   getAssetsReferences,
   renderer,
   minifyHtml
-} = require('@ecomplus/storefront-renderer')
+} = require('@confere-stores/storefront-renderer')
 
-exports.ssr = (req, res, settings) => {
+exports.ssr = (req, res, settings, contactInfo = null, baseDir = null) => {
   const url = req.url.replace(/\?.*$/, '').replace(/\.html$/, '')
 
   let cache
   try {
-    cache = require(process.env.STOREFRONT_BUNDLES_PATH || path.join(process.cwd(), '.bundles.json'))
+    cache = require(baseDir || process.env.STOREFRONT_BUNDLES_PATH || path.join(process.cwd(), '.bundles.json'))
   } catch (err) {
     console.error(err)
   }
@@ -31,10 +32,8 @@ exports.ssr = (req, res, settings) => {
         .status(404).end()
     }
   }
-  console.log(url)
 
-  return renderer(settings)(url)
-
+  return renderer(settings, contactInfo, baseDir)(url)
     .then(html => {
       if (html) {
         if (cache) {
