@@ -122,7 +122,9 @@ module.exports = (s, contactInfo = null, baseDir) => {
 
       let obj
       try {
-        if (devMode) {
+        if (filepath.includes('contacts.json')) {
+          obj = contactInfo
+        } else if (devMode) {
           obj = JSON.parse(fs.readFileSync(filepath, 'utf8'))
         } else {
           obj = require(filepath)
