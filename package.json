@@ -6,7 +6,7 @@
   "bugs": {
     "url": "https://github.com/confere-stores/storefront-renderer/issues"
   },
-  "bundleDependencies": false,
+  "bundleDependencies": [],
   "dependencies": {
     "@ecomplus/client": "^2.2.1",
     "@ecomplus/i18n": "^1.20.0",
@@ -34,5 +34,5 @@
   "main": "src/index.js",
   "name": "@confere-stores/storefront-renderer",
   "repository": "git://github.com/confere-stores/storefront-renderer.git",
-  "version": "1.0.5"
+  "version": "1.0.6"
 }
