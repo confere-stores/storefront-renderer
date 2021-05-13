@@ -1,12 +1,12 @@
 'use strict'
 
-module.exports = (d) => {
+module.exports = (d, s) => {
   const fs = require('fs')
   const path = require('path')
   const ecomClient = require('@ecomplus/client')
   const EcomSearch = require('@ecomplus/search-engine')
   const paths = require('./paths')(d)
-  const config = require('./config')(d)
+  const config = require('./config')(d, s)
 
   return (storeId = config.storeId, pubSrc = paths.pub, ecomManifest) => {
     return new Promise((resolve, reject) => {

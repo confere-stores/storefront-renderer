@@ -2,14 +2,14 @@
 
 const devMode = process.env.NODE_ENV !== 'production'
 
-module.exports = (d) => {
+module.exports = (d, s = null) => {
   const path = require('path')
   const paths = require('./paths')(d)
 
 // setup ganaral config properties
   let settings
   try {
-    settings = require(path.join(paths.content, 'settings.json'))
+    settings = s || require(path.join(paths.content, 'settings.json'))
   } catch (err) {
     console.error(err)
     settings = {}
