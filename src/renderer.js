@@ -228,7 +228,8 @@ module.exports = (s, contactInfo = null, baseDir) => {
                 context = resolveRoute(route)
               }
               return context
-            }
+            },
+            router
           }
         }
 
