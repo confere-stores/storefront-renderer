@@ -19,7 +19,6 @@ module.exports = (d) => {
   const lang = settings.lang || 'en_us'
 // number Store ID from content settings or env var
   let storeId = settings.store_id || process.env.ECOM_STORE_ID || 1011
-  console.log(storeId, process.env.ECOM_STORE_ID)
   if (typeof storeId === 'string') {
     storeId = parseInt(storeId, 10)
   }
