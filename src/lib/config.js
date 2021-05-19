@@ -2,18 +2,8 @@
 
 const devMode = process.env.NODE_ENV !== 'production'
 
-module.exports = (d, s = null) => {
-  const path = require('path')
-  const paths = require('./paths')(d)
-
-// setup ganaral config properties
-  let settings
-  try {
-    settings = s || require(path.join(paths.content, 'settings.json'))
-  } catch (err) {
-    console.error(err)
-    settings = {}
-  }
+module.exports = (settings = null) => {
+// setup genaral config properties
   const primaryColor = settings.primary_color || '#3fe3e3'
   const secondaryColor = settings.secondary_color || '#5e1efe'
   const lang = settings.lang || 'en_us'

@@ -6,7 +6,7 @@ module.exports = (d, s) => {
   const ecomClient = require('@ecomplus/client')
   const EcomSearch = require('@ecomplus/search-engine')
   const paths = require('./paths')(d)
-  const config = require('./config')(d, s)
+  const config = require('./config')(s)
 
   return (storeId = config.storeId, pubSrc = paths.pub, ecomManifest) => {
     return new Promise((resolve, reject) => {

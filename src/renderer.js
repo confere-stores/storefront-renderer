@@ -1,5 +1,5 @@
 'use strict'
-module.exports = (s, contactInfo = null, baseDir) => {
+module.exports = (s, contactInfo = null, baseDir, files) => {
   const path = require('path')
   const paths = require('./lib/paths')(baseDir)
   const fs = require('fs')
@@ -10,7 +10,7 @@ module.exports = (s, contactInfo = null, baseDir) => {
   const EcomSearch = require('@ecomplus/search-engine')
   const getStoreData = require('./lib/get-store-data')(baseDir, s)
   const cmsCollections = require('./lib/cms-collections')(baseDir)
-  const config = require('./lib/config')(baseDir, s)
+  const config = require('./lib/config')(s)
   const lodash = require('lodash')
   const MarkdownIt = require('markdown-it')
   const imageSize = require('image-size')
@@ -122,7 +122,9 @@ module.exports = (s, contactInfo = null, baseDir) => {
 
       let obj
       try {
-        if (filepath.includes('contacts.json')) {
+        if (files[`${file}.json`]) {
+          obj = files[`${file}.json`]
+        } else if (filepath.includes('contacts.json')) {
           obj = contactInfo
         } else if (devMode) {
           obj = JSON.parse(fs.readFileSync(filepath, 'utf8'))

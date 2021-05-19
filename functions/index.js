@@ -1,5 +1,4 @@
 const path = require('path')
-const fs = require('fs')
 
 const {
   getAssetsReferences,
@@ -7,7 +6,7 @@ const {
   minifyHtml
 } = require('@confere-stores/storefront-renderer')
 
-exports.ssr = (req, res, settings, contactInfo = null, baseDir = null) => {
+exports.ssr = (req, res, settings, contactInfo = null, baseDir = null, files) => {
   const url = req.url.replace(/\?.*$/, '').replace(/\.html$/, '')
 
   let cache
@@ -33,7 +32,7 @@ exports.ssr = (req, res, settings, contactInfo = null, baseDir = null) => {
     }
   }
 
-  return renderer(settings, contactInfo, baseDir)(url)
+  return renderer(settings, contactInfo, baseDir, files)(url)
     .then(html => {
       if (html) {
         if (cache) {
