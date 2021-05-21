@@ -6,7 +6,7 @@ const {
   minifyHtml
 } = require('@confere-stores/storefront-renderer')
 
-exports.ssr = (req, res, settings, contactInfo = null, baseDir = null, files) => {
+exports.ssr = (req, res, settings, contactInfo = null, baseDir = null, files = null) => {
   const url = req.url.replace(/\?.*$/, '').replace(/\.html$/, '')
 
   let cache

@@ -1,5 +1,5 @@
 'use strict'
-module.exports = (s, contactInfo = null, baseDir, files) => {
+module.exports = (s, contactInfo = null, baseDir, files = null) => {
   const path = require('path')
   const paths = require('./lib/paths')(baseDir)
   const fs = require('fs')
@@ -122,7 +122,7 @@ module.exports = (s, contactInfo = null, baseDir, files) => {
 
       let obj
       try {
-        if (files[`${file}.json`]) {
+        if (files && files[`${file}.json`]) {
           obj = files[`${file}.json`]
         } else if (filepath.includes('contacts.json')) {
           obj = contactInfo
