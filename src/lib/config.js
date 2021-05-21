@@ -14,8 +14,8 @@ module.exports = (settings = null) => {
   }
 
 // imported storefront template and components packages
-  const templatePkg = process.env.STOREFRONT_TEMPLATE || '@ecomplus/storefront-template'
-  const componentsPkg = process.env.STOREFRONT_COMPONENTS || '@ecomplus/storefront-components'
+  const templatePkg = process.env.STOREFRONT_TEMPLATE || '@confere-stores/storefront-template'
+  const componentsPkg = process.env.STOREFRONT_COMPONENTS || '@confere-stores/storefront-components'
 
   return {
     devMode,
