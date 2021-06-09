@@ -114,9 +114,9 @@ module.exports = (s, contactInfo = null, baseDir, files = null) => {
     data.cms = file => {
       // first check if it's a folder collection
       const dirColl = path.join(paths.content, file)
-      if (fs.existsSync(dirColl) && fs.lstatSync(dirColl).isDirectory()) {
-        // returns list of collection slugs
-        return fs.readdirSync(dirColl).map(filename => filename.replace('.json', ''))
+      if (file === 'pages' || file === 'widgets' || file === 'posts') {
+        const keys = Object.keys(files)
+        return keys.filter(key => key.startsWith(file)).map(filename => filename.replace(`${file}/`, '').replace('.json', ''))
       }
       const filepath = `${dirColl}.json`
 
