@@ -4,7 +4,7 @@ module.exports = (d, s) => {
   const fs = require('fs')
   const path = require('path')
   const ecomClient = require('@ecomplus/client')
-  const EcomSearch = require('@confere-stores/search-engine')
+  const EcomSearch = require('@ecomplus/search-engine')
   const paths = require('./paths')(d)
   const config = require('./config')(s)
 
