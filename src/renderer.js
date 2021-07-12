@@ -104,8 +104,21 @@ module.exports = (s, contactInfo = null, baseDir, files = null) => {
     compileTemplate(filename, collection)
   })
 
+  // abstracting comming image size handler for local images
+  const tryImageSize = src => {
+    let dimensions = {}
+    if (typeof src === 'string' && src.startsWith('/')) {
+      try {
+        dimensions = imageSize(`template/public${src}`)
+      } catch (e) {
+        dimensions = {}
+      }
+    }
+    return dimensions
+  }
+
 // setup initial template data
-  const data = { ...config, settings: s, lodash, ecomUtils, ecomClient, EcomSearch, imageSize }
+  const data = { ...config, settings: s, lodash, ecomUtils, ecomClient, EcomSearch, imageSize, tryImageSize }
 
   const dataPromise = getStoreData().then(storeData => {
     Object.assign(data, storeData)

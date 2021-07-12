@@ -3,6 +3,144 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.8.0](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.7.6...@ecomplus/storefront-renderer@2.8.0) (2021-07-08)
+
+
+### Features
+
+* **renderer/ejs-data:** abstracting comming image size handler for local images with `tryImageSize` ([0b3cc31](https://github.com/ecomplus/storefront/commit/0b3cc31e5da798c78485b193dae2bbfdc5d318ec))
+
+
+
+
+
+## [2.7.6](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.7.5...@ecomplus/storefront-renderer@2.7.6) (2021-07-05)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#489](https://github.com/ecomplus/storefront/issues/489)) ([7a29e5f](https://github.com/ecomplus/storefront/commit/7a29e5f08703d2d6b78a39f4490387b4fa45afa8))
+
+
+
+
+
+## [2.7.5](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.7.4...@ecomplus/storefront-renderer@2.7.5) (2021-07-02)
+
+
+### Bug Fixes
+
+* **renderer/ejs:** prevent including from template pkg when not running with framework by default ([4f30f38](https://github.com/ecomplus/storefront/commit/4f30f384d89d6af14233ddd8843ce9a7ad5af8a0))
+* **renderer/redirects:** add `proxy-revalidate` to cache control for 302 redirects ([bfa14bb](https://github.com/ecomplus/storefront/commit/bfa14bb9f20b4cbe9aa2eca954a99bc727fe29c7))
+
+
+
+
+
+## [2.7.4](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.7.3...@ecomplus/storefront-renderer@2.7.4) (2021-06-17)
+
+
+### Bug Fixes
+
+* **deps:** update @ecomplus/search-engine to v2.6.1 ([20214c5](https://github.com/ecomplus/storefront/commit/20214c5cc27c75a2ba597da9557b6352b84a92a8))
+
+
+
+
+
+## [2.7.3](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.7.2...@ecomplus/storefront-renderer@2.7.3) (2021-06-11)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#478](https://github.com/ecomplus/storefront/issues/478)) ([f3b5f96](https://github.com/ecomplus/storefront/commit/f3b5f96c6d863d446d806668c4fbab92e785cce2))
+
+
+
+
+
+## [2.7.2](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.7.1...@ecomplus/storefront-renderer@2.7.2) (2021-05-18)
+
+
+### Bug Fixes
+
+* **deps:** update @ecomplus/i18n to v1.21.0 ([a235058](https://github.com/ecomplus/storefront/commit/a2350580c50480e9caf74ac64dde14e4b618a057))
+
+
+
+
+
+## [2.7.1](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.7.0...@ecomplus/storefront-renderer@2.7.1) (2021-04-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency image-size to v1 ([#446](https://github.com/ecomplus/storefront/issues/446)) ([3e3cb08](https://github.com/ecomplus/storefront/commit/3e3cb08e6769e30f9102aaa8116cb59caaf105a2))
+
+
+
+
+
+# [2.7.0](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.6.2...@ecomplus/storefront-renderer@2.7.0) (2021-04-19)
+
+
+### Features
+
+* **renderer/get-store-data:** handle store data cache with optional env vars ([e85d3f9](https://github.com/ecomplus/storefront/commit/e85d3f96c5dd89eaee864800574a2bfe2424ea25))
+
+
+### Performance Improvements
+
+* **renderer/ssr:** enable store data from cache with env var ([d674ecb](https://github.com/ecomplus/storefront/commit/d674ecbdede790541bcc35cff6cf32d7bc09c316))
+
+
+
+
+
+## [2.6.2](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.6.1...@ecomplus/storefront-renderer@2.6.2) (2021-04-18)
+
+
+### Bug Fixes
+
+* **renderer/ssr:** fix cache headers with lower max age for redirect responses ([bb3788e](https://github.com/ecomplus/storefront/commit/bb3788e22c1f28a403d49d717f7ad0b7d55a001e))
+
+
+
+
+
+## [2.6.1](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.6.0...@ecomplus/storefront-renderer@2.6.1) (2021-03-30)
+
+
+### Bug Fixes
+
+* **ssr:** edit default cache control when no long cache set (lower) ([7f87f3e](https://github.com/ecomplus/storefront/commit/7f87f3ed444b96ded1eb453f1d999d617a38c899))
+
+
+
+
+
+# [2.6.0](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.5.0...@ecomplus/storefront-renderer@2.6.0) (2021-03-29)
+
+
+### Features
+
+* **ssr:** handling `STOREFRONT_LONG_CACHE` optional env ([2533f3b](https://github.com/ecomplus/storefront/commit/2533f3b75134a30fccafa1fa398d3eb67a50972c))
+
+
+
+
+
+# [2.5.0](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.4.15...@ecomplus/storefront-renderer@2.5.0) (2021-03-29)
+
+
+### Features
+
+* **ssr:** support new `getCacheControl` callback arg ([6c8bd34](https://github.com/ecomplus/storefront/commit/6c8bd340a7ed94104d6766f5a7eda5b942643107))
+
+
+
+
+
 ## [2.4.15](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.4.14...@ecomplus/storefront-renderer@2.4.15) (2021-03-12)
 
 
