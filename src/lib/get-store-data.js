@@ -10,7 +10,7 @@ module.exports = (d, s) => {
   const axios = require('axios')
 
   const reviewApi = axios.create({
-    baseURL: 'http://localhost:3000'  // Change to prod url
+    baseURL: 'https://review.clubou.com.br/v1'  // Change to prod url
   })
 
   return (storeId = config.storeId, pubSrc = paths.pub, ecomManifest) => {
