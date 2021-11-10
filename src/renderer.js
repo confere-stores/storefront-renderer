@@ -93,7 +93,8 @@ module.exports = (s, contactInfo = null, baseDir, files = null) => {
     'products',
     'brands',
     'categories',
-    'collections'
+    'collections',
+    'ratings'
   ].forEach(resource => {
     const filename = path.resolve(paths.pages, `#${resource}.ejs`)
     compileTemplate(filename, resource)
@@ -119,7 +120,7 @@ module.exports = (s, contactInfo = null, baseDir, files = null) => {
   }
 
 // setup initial template data
-  const data = { ...config, settings: s, lodash, ecomUtils, ecomClient, EcomSearch, imageSize, tryImageSize, httpClient: axios }
+  const data = { ...config, settings: s, lodash, ecomUtils, ecomClient, EcomSearch, imageSize, tryImageSize }
 
   const dataPromise = getStoreData().then(storeData => {
     Object.assign(data, storeData)
@@ -239,6 +240,7 @@ module.exports = (s, contactInfo = null, baseDir, files = null) => {
         const params = {
           _: {
             ...data,
+            httpClient: axios,
             route,
             // abstraction to resolve current rounte
             resolveRoute: () => {
