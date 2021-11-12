@@ -94,7 +94,6 @@ module.exports = (s, contactInfo = null, baseDir, files = null) => {
     'brands',
     'categories',
     'collections',
-    'ratings'
   ].forEach(resource => {
     const filename = path.resolve(paths.pages, `#${resource}.ejs`)
     compileTemplate(filename, resource)
