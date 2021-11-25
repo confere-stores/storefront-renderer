@@ -119,7 +119,7 @@ module.exports = (s, contactInfo = null, baseDir, files = null) => {
   }
 
 // setup initial template data
-  const data = { ...config, settings: s, lodash, ecomUtils, ecomClient, EcomSearch, imageSize, tryImageSize }
+  const data = { ...config, settings: s, lodash, ecomUtils, ecomClient, EcomSearch, imageSize, tryImageSize, axios }
 
   const dataPromise = getStoreData().then(storeData => {
     Object.assign(data, storeData)
