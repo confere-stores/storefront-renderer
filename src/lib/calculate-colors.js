@@ -109,6 +109,5 @@ const calculateColors = (primary, secondary) => {
     css
   }
 }
-console.log(calculateColors('#78c2ad', '#f3969a'))
 
 module.exports = calculateColors
