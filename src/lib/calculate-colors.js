@@ -37,7 +37,7 @@ const hexToRgb = (hex) => {
 }
 
 const calculateColors = (primary, secondary) => {
-  return {
+  const colors = {
     '--primary': primary,
     '--primary-yiq': yiq(primary),
     '--primary-rgb': hexToRgb(primary),
@@ -98,6 +98,17 @@ const calculateColors = (primary, secondary) => {
     '--secondary-darkest-rgb': hexToRgb(LightenDarkenColor(secondary, -56)),
     '--secondary-darkest-yiq': yiq(LightenDarkenColor(secondary, -56)),
   }
+
+  let css = ''
+  Object.keys(colors).map((key) => {
+    css += `${key}: ${colors[key]};\n`
+  })
+
+  return {
+    colors,
+    css
+  }
 }
+console.log(calculateColors('#78c2ad', '#f3969a'))
 
 module.exports = calculateColors
