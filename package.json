@@ -18,7 +18,8 @@
     "html-minifier": "^4.0.0",
     "image-size": "^1.0.0",
     "lodash": "^4.17.21",
-    "markdown-it": "^12.2.0"
+    "markdown-it": "^12.2.0",
+    "yiq": "^4.0.0"
   },
   "deprecated": false,
   "description": "SSR for Storefront EJS views with E-Com Plus APIs",
@@ -35,5 +36,5 @@
   "main": "src/index.js",
   "name": "@confere-stores/storefront-renderer",
   "repository": "git://github.com/confere-stores/storefront-renderer.git",
-  "version": "2.8.6"
+  "version": "2.8.7"
 }

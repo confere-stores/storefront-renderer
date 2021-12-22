@@ -15,6 +15,7 @@ module.exports = (s, contactInfo = null, baseDir, files = null) => {
   const MarkdownIt = require('markdown-it')
   const imageSize = require('image-size')
   const axios = require('axios')
+  const calculateColors = require('./lib/calculate-colors')
 
   const { devMode, storeId, lang, settings, templatePkg } = config
 
@@ -119,7 +120,18 @@ module.exports = (s, contactInfo = null, baseDir, files = null) => {
   }
 
 // setup initial template data
-  const data = { ...config, settings: s, lodash, ecomUtils, ecomClient, EcomSearch, imageSize, tryImageSize, axios }
+  const data = {
+    ...config,
+    settings: s,
+    lodash,
+    ecomUtils,
+    ecomClient,
+    EcomSearch,
+    imageSize,
+    tryImageSize,
+    axios,
+    colors: calculateColors(s.primary_color, s.secondary_color)
+  }
 
   const dataPromise = getStoreData().then(storeData => {
     Object.assign(data, storeData)
