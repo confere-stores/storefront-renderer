@@ -23,7 +23,9 @@ const LightenDarkenColor = (col, amt) => {
 
   const hex = (usePound ? '#' : '') + (g | (b << 8) | (r << 16)).toString(16)
   if (hex === '#0') return '#000000'
-  return hex
+  if (hex.length === 6) return `#0${hex.replace('#', '')}`
+  if (hex.length ===7) return hex
+  return col
 }
 
 const hexToRgb = (hex) => {
