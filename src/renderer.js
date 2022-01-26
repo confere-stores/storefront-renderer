@@ -15,7 +15,7 @@ module.exports = (s, contactInfo = null, baseDir, files = null) => {
   const MarkdownIt = require('markdown-it')
   const imageSize = require('image-size')
   const axios = require('axios')
-  const calculateColors = require('./lib/calculate-colors')
+  const genColorCssVars = require('./lib/calculate-colors')
 
   const { devMode, storeId, lang, settings, templatePkg } = config
 
@@ -130,7 +130,10 @@ module.exports = (s, contactInfo = null, baseDir, files = null) => {
     imageSize,
     tryImageSize,
     axios,
-    colors: calculateColors(s.primary_color, s.secondary_color)
+    colors: {
+      primary: genColorCssVars('primary', s.primary_color),
+      secondary: genColorCssVars('secondary', s.secondary_color)
+    }
   }
 
   const dataPromise = getStoreData().then(storeData => {

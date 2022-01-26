@@ -3,6 +3,109 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.8.10](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.8.9...@ecomplus/storefront-renderer@2.8.10) (2022-01-04)
+
+
+### Bug Fixes
+
+* **deps:** update @ecomplus/i18n to v1.25.0 ([ffe7a27](https://github.com/ecomplus/storefront/commit/ffe7a27a0d0ef5a5ce166c66062002c56d9f3068))
+
+
+
+
+
+## [2.8.9](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.8.8...@ecomplus/storefront-renderer@2.8.9) (2021-12-29)
+
+**Note:** Version bump only for package @ecomplus/storefront-renderer
+
+
+
+
+
+## [2.8.8](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.8.7...@ecomplus/storefront-renderer@2.8.8) (2021-11-10)
+
+**Note:** Version bump only for package @ecomplus/storefront-renderer
+
+
+
+
+
+## [2.8.7](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.8.6...@ecomplus/storefront-renderer@2.8.7) (2021-11-10)
+
+
+### Bug Fixes
+
+* **renderer/functions:** returns 404 status code and refresh meta tag for 404 fallback ([0ca49e7](https://github.com/ecomplus/storefront/commit/0ca49e7c963c113eabbd7a3782d74dacac35ed30))
+
+
+
+
+
+## [2.8.6](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.8.5...@ecomplus/storefront-renderer@2.8.6) (2021-11-10)
+
+
+### Bug Fixes
+
+* **renderer/functions:** returns 404 status code and refresh meta tag for 404 fallback ([7273876](https://github.com/ecomplus/storefront/commit/7273876b04251da96bf14372bed33718c4436657))
+
+
+
+
+
+## [2.8.5](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.8.4...@ecomplus/storefront-renderer@2.8.5) (2021-11-10)
+
+
+### Bug Fixes
+
+* **renderer/404:** render 404 ejs internally without redirect on url not found ([fee59b5](https://github.com/ecomplus/storefront/commit/fee59b5979b9814e284afbd97005e02531e44fb2))
+
+
+
+
+
+## [2.8.4](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.8.3...@ecomplus/storefront-renderer@2.8.4) (2021-11-09)
+
+
+### Bug Fixes
+
+* **renderer/404:** return 404 status code for not found pages and set fallback cookie [[#555](https://github.com/ecomplus/storefront/issues/555)] ([4587978](https://github.com/ecomplus/storefront/commit/458797803d42af75cf6ffd77c464b99807ede4f7))
+
+
+
+
+
+## [2.8.3](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.8.2...@ecomplus/storefront-renderer@2.8.3) (2021-10-25)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#550](https://github.com/ecomplus/storefront/issues/550)) ([433f9c5](https://github.com/ecomplus/storefront/commit/433f9c51d5bbc2701351be74e1b9289a1cb1a28c))
+
+
+
+
+
+## [2.8.2](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.8.1...@ecomplus/storefront-renderer@2.8.2) (2021-09-02)
+
+
+### Bug Fixes
+
+* **renderer/get-store-data:** catch els index not found (any items) error on base store data setup ([f281e43](https://github.com/ecomplus/storefront/commit/f281e4308f26ef8e315901705db544b46c598f32))
+
+
+
+
+
+
+## [2.8.1](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.8.0...@ecomplus/storefront-renderer@2.8.1) (2021-08-17)
+
+**Note:** Version bump only for package @ecomplus/storefront-renderer
+
+
+
+
+
+
 # [2.8.0](https://github.com/ecomplus/storefront/compare/@ecomplus/storefront-renderer@2.7.6...@ecomplus/storefront-renderer@2.8.0) (2021-07-08)
 
 
