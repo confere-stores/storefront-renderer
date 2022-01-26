@@ -15,7 +15,7 @@ module.exports = (s, contactInfo = null, baseDir, files = null) => {
   const MarkdownIt = require('markdown-it')
   const imageSize = require('image-size')
   const axios = require('axios')
-  const genColorCssVars = require('./lib/calculate-colors')
+  const { genColorCssVars, getThemeColors } = require('./lib/calculate-colors')
 
   const { devMode, storeId, lang, settings, templatePkg } = config
 
@@ -119,6 +119,12 @@ module.exports = (s, contactInfo = null, baseDir, files = null) => {
     return dimensions
   }
 
+  const { theme } = s
+  const themeColors = getThemeColors(theme.bootswatch, theme.custom, {
+    primary: s.primary_color || '#20c997',
+    secondary: s.secondary_color || '#343a40'
+  })
+
 // setup initial template data
   const data = {
     ...config,
@@ -131,8 +137,8 @@ module.exports = (s, contactInfo = null, baseDir, files = null) => {
     tryImageSize,
     axios,
     colors: {
-      primary: genColorCssVars('primary', s.primary_color),
-      secondary: genColorCssVars('secondary', s.secondary_color)
+      primary: genColorCssVars('primary', themeColors.primary),
+      secondary: genColorCssVars('secondary', themeColors.secondary)
     }
   }
 
