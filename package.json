@@ -9,17 +9,16 @@
   "bundleDependencies": [],
   "dependencies": {
     "@ecomplus/client": "^2.2.1",
-    "@ecomplus/i18n": "^1.25.0",
+    "@ecomplus/i18n": "^1.26.0",
     "@ecomplus/search-engine": "^2.6.1",
     "@ecomplus/storefront-router": "^2.2.1",
     "@ecomplus/utils": "^1.4.1",
     "axios": "^0.22.0",
     "ejs": "^3.1.6",
     "html-minifier": "^4.0.0",
-    "image-size": "^1.0.0",
+    "image-size": "^1.0.1",
     "lodash": "^4.17.21",
-    "markdown-it": "^12.2.0",
-    "yiq": "^4.0.0"
+    "markdown-it": "^12.2.0"
   },
   "deprecated": false,
   "description": "SSR for Storefront EJS views with E-Com Plus APIs",
@@ -36,5 +35,5 @@
   "main": "src/index.js",
   "name": "@confere-stores/storefront-renderer",
   "repository": "git://github.com/confere-stores/storefront-renderer.git",
-  "version": "2.8.12"
+  "version": "2.8.13"
 }
