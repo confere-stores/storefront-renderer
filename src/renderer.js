@@ -16,6 +16,7 @@ module.exports = (s, contactInfo = null, baseDir, files = null) => {
   const imageSize = require('image-size')
   const axios = require('axios')
   const { genColorCssVars, getThemeColors } = require('./lib/calculate-colors')
+  const customFont = require('./lib/custom-font')
 
   const { devMode, storeId, lang, settings, templatePkg } = config
 
@@ -119,7 +120,7 @@ module.exports = (s, contactInfo = null, baseDir, files = null) => {
     return dimensions
   }
 
-  const { theme } = s
+  const { theme, font_family, icons_font } = s
   const themeColors = getThemeColors(theme.bootswatch, theme.custom, {
     primary: s.primary_color || '#20c997',
     secondary: s.secondary_color || '#343a40'
@@ -139,7 +140,8 @@ module.exports = (s, contactInfo = null, baseDir, files = null) => {
     colors: {
       primary: genColorCssVars('primary', themeColors.primary),
       secondary: genColorCssVars('secondary', themeColors.secondary)
-    }
+    },
+    font: customFont(font_family)
   }
 
   const dataPromise = getStoreData().then(storeData => {
