@@ -137,11 +137,10 @@ module.exports = (s, contactInfo = null, baseDir, files = null) => {
     imageSize,
     tryImageSize,
     axios,
+    font: customFont(font_family),
     colors: {
-      primary: genColorCssVars('primary', themeColors.primary),
-      secondary: genColorCssVars('secondary', themeColors.secondary)
-    },
-    font: customFont(font_family)
+      root: genColorCssVars(themeColors.primary, themeColors.secondary)
+    }
   }
 
   const dataPromise = getStoreData().then(storeData => {
