@@ -20,7 +20,7 @@ const sass = require('sass')
       $blue: blue($color);
       $yiqValue: (($red*.299)+($green*.587)+($blue*.114));
       
-      @if $yiqValue >= 128 {
+      @if $yiqValue >= 150 {
         @return var(--gray-dark)
       } @else {
         @return var(--white)
