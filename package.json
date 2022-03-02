@@ -36,5 +36,5 @@
   "main": "src/index.js",
   "name": "@confere-stores/storefront-renderer",
   "repository": "git://github.com/confere-stores/storefront-renderer.git",
-  "version": "2.8.14"
+  "version": "2.8.15-rc.1"
 }

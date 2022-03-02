@@ -122,8 +122,8 @@ module.exports = (s, contactInfo = null, baseDir, files = null) => {
 
   const { theme, font_family, icons_font } = s
   const themeColors = getThemeColors(theme.bootswatch, theme.custom, {
-    primary: s.primary_color || '#20c997',
-    secondary: s.secondary_color || '#343a40'
+    primary: !s.primary_color || s.primary_color === 'null' ? '#20c997' : s.primary_color,
+    secondary: !s.secondary_color || s.secondary_color === 'null' ? '#343a40' : s.secondary_color
   })
 
 // setup initial template data
