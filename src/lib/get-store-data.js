@@ -66,7 +66,7 @@ module.exports = (d, s) => {
                   let body = response.data
                   data[prop] = body.ponderated
                 })
-              }  
+              }
 
             } else if (search) {
               // request with search engine instance
@@ -74,12 +74,8 @@ module.exports = (d, s) => {
                 .then(() => {
                   data[prop] = ecomSearch.getItems()
                 })
-                .catch(error => {
-                  if (error.response && error.response.status === 404) {
-                    data[prop] = []
-                  } else {
-                    throw error
-                  }
+                .catch(() => {
+                  data[prop] = []
                 })
             }
 
